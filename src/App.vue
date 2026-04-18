@@ -1,12 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <Dashboard />
+      <router-view />
     </v-main>
-    
   </v-app>
 </template>
 
-<script lang="ts" setup>
-  import Dashboard from '@/components/Dashboard.vue'
+<script setup>
 </script>
