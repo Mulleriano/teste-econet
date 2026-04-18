@@ -1,16 +1,14 @@
 import { defineStore } from "pinia";
 import { api } from "@/api/api";
 import type { Company, Employee } from "@/types/companies";
+import type { Status } from "@/types/status";
 import resetStatus from "@/utils/resetStatus";
 
 interface CompanyState {
   companies: Company[];
   companySelected: Company | null;
   loading: boolean;
-  status: {
-    message: string | null;
-    type: "error" | "success" | null;
-  };
+  status: Status;
 }
 
 export const useCompanyStore = defineStore("company", {
@@ -19,8 +17,8 @@ export const useCompanyStore = defineStore("company", {
     companySelected: null,
     loading: false,
     status: {
-      message: null,
-      type: null,
+      message: "",
+      type: undefined,
     },
   }),
 
