@@ -1,0 +1,405 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Empresa A",
+      "cnpj": "00.000.000/0001-00",
+      "active": true,
+      "employees": [
+        {
+          "id": 1,
+          "name": "Funcionário 1",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 2,
+          "name": "Funcionário 2",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Empresa B",
+      "cnpj": "11.111.111/0001-11",
+      "active": true,
+      "employees": [
+        {
+          "id": 3,
+          "name": "Funcionário 3",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 4,
+          "name": "Funcionário 4",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Empresa C",
+      "cnpj": "22.222.222/0001-22",
+      "active": true,
+      "employees": [
+        {
+          "id": 5,
+          "name": "Funcionário 5",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 6,
+          "name": "Funcionário 6",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Empresa D",
+      "cnpj": "33.333.333/0001-33",
+      "active": true,
+      "employees": [
+        {
+          "id": 7,
+          "name": "Funcionário 7",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 8,
+          "name": "Funcionário 8",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Empresa E",
+      "cnpj": "44.444.444/0001-44",
+      "active": false,
+      "employees": [
+        {
+          "id": 9,
+          "name": "Funcionário 9",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 10,
+          "name": "Funcionário 10",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Empresa F",
+      "cnpj": "55.555.555/0001-55",
+      "active": true,
+      "employees": [
+        {
+          "id": 11,
+          "name": "Funcionário 11",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 12,
+          "name": "Funcionário 12",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Empresa G",
+      "cnpj": "66.666.666/0001-66",
+      "active": true,
+      "employees": [
+        {
+          "id": 13,
+          "name": "Funcionário 13",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 14,
+          "name": "Funcionário 14",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Empresa H",
+      "cnpj": "77.777.777/0001-77",
+      "active": false,
+      "employees": [
+        {
+          "id": 15,
+          "name": "Funcionário 15",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 16,
+          "name": "Funcionário 16",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Empresa I",
+      "cnpj": "88.888.888/0001-88",
+      "active": true,
+      "employees": [
+        {
+          "id": 17,
+          "name": "Funcionário 17",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 18,
+          "name": "Funcionário 18",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Empresa J",
+      "cnpj": "99.999.999/0001-99",
+      "active": false,
+      "employees": [
+        {
+          "id": 19,
+          "name": "Funcionário 19",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 20,
+          "name": "Funcionário 20",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Empresa K",
+      "cnpj": "10.101.010/0001-10",
+      "active": true,
+      "employees": [
+        {
+          "id": 21,
+          "name": "Funcionário 21",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 22,
+          "name": "Funcionário 22",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Empresa L",
+      "cnpj": "20.202.020/0001-20",
+      "active": true,
+      "employees": [
+        {
+          "id": 23,
+          "name": "Funcionário 23",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 24,
+          "name": "Funcionário 24",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Empresa M",
+      "cnpj": "30.303.030/0001-30",
+      "active": false,
+      "employees": [
+        {
+          "id": 25,
+          "name": "Funcionário 25",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 26,
+          "name": "Funcionário 26",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Empresa N",
+      "cnpj": "40.404.040/0001-40",
+      "active": true,
+      "employees": [
+        {
+          "id": 27,
+          "name": "Funcionário 27",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 28,
+          "name": "Funcionário 28",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Empresa O",
+      "cnpj": "50.505.050/0001-50",
+      "active": true,
+      "employees": [
+        {
+          "id": 29,
+          "name": "Funcionário 29",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 30,
+          "name": "Funcionário 30",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Empresa P",
+      "cnpj": "60.606.060/0001-60",
+      "active": false,
+      "employees": [
+        {
+          "id": 31,
+          "name": "Funcionário 31",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 32,
+          "name": "Funcionário 32",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Empresa Q",
+      "cnpj": "70.707.070/0001-70",
+      "active": true,
+      "employees": [
+        {
+          "id": 33,
+          "name": "Funcionário 33",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 34,
+          "name": "Funcionário 34",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Empresa R",
+      "cnpj": "80.808.080/0001-80",
+      "active": true,
+      "employees": [
+        {
+          "id": 35,
+          "name": "Funcionário 35",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 36,
+          "name": "Funcionário 36",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Empresa S",
+      "cnpj": "90.909.090/0001-90",
+      "active": false,
+      "employees": [
+        {
+          "id": 37,
+          "name": "Funcionário 37",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 38,
+          "name": "Funcionário 38",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Empresa T",
+      "cnpj": "12.121.212/0001-12",
+      "active": true,
+      "employees": [
+        {
+          "id": 39,
+          "name": "Funcionário 39",
+          "email": "email@email.com",
+          "position": "Cargo 1"
+        },
+        {
+          "id": 40,
+          "name": "Funcionário 40",
+          "email": "email@email.com",
+          "position": "Cargo 2"
+        }
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
