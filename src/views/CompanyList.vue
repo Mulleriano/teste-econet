@@ -55,7 +55,7 @@
       <div class="d-flex flex-wrap justify-center ga-4">
         <CompanyCard
           v-for="company in items"
-          :key="company.id"
+          :key="company.raw.id"
           :company="company.raw"
           @delete="
             () => {
