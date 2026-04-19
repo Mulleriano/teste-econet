@@ -1,12 +1,12 @@
 export interface Employee {
-  id: number;
+  id: string;
   name: string;
   email: string;
   position: string;
 }
 
 export type Company = {
-  id: number;
+  id: string;
   name: string;
   cnpj: string;
   active: boolean;

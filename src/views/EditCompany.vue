@@ -1,8 +1,7 @@
 <template>
-  <Alert :status="companyStore.status" />
   <div class="d-flex flex-column ga-4 align-center">
     <div class="d-flex align-center ga-4">
-      <v-btn @click="$router.push('../')" icon="mdi-arrow-left-bold"></v-btn>
+      <v-btn @click="$router.go(-1)" icon="mdi-arrow-left-bold"></v-btn>
       <h1 class="text-center">
         Editar {{ companyStore.companySelected?.name }}
       </h1>
@@ -37,6 +36,6 @@ function updateCompany(company: Company) {
 }
 
 onMounted(async () => {
-  await companyStore.selectedCompany(Number(route.params.id));
+  await companyStore.selectedCompany(route.params.id as string);
 });
 </script>

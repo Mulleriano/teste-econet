@@ -1,5 +1,4 @@
 <template>
-    
   <v-card class="pa-5 pb-3 rounded-xl" style="width: 390px">
     <div class="d-flex justify-space-between align-center gap-2">
       <v-chip color="primary" class="mdi mdi-domain"></v-chip>
@@ -42,6 +41,6 @@ interface Props {
 const props = defineProps<Props>();
 
 defineEmits<{
-  delete: [companyId: number];
+  delete: [companyId: string];
 }>();
 </script>

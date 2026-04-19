@@ -1,3 +1,3 @@
-export default function generateId(): number {
-  return Math.floor(1000 + Math.random() * 9000);
+export default function generateId(): string {
+  return crypto.randomUUID();
 }

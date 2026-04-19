@@ -15,7 +15,7 @@ export const useCompanyStore = defineStore("company", {
   state: (): CompanyState => ({
     companies: [],
     companySelected: {
-      id: 0,
+      id: "",
       name: "",
       cnpj: "",
       active: true,
@@ -49,8 +49,7 @@ export const useCompanyStore = defineStore("company", {
         this.loading = false;
       }
     },
-
-    async selectedCompany(id: number): Promise<void> {
+    async selectedCompany(id: string): Promise<void> {
       this.loading = true;
       this.status = resetStatus();
       try {
@@ -63,7 +62,6 @@ export const useCompanyStore = defineStore("company", {
         this.loading = false;
       }
     },
-
     async createCompany(company: Company): Promise<void> {
       this.loading = true;
       this.status = resetStatus();
@@ -80,12 +78,8 @@ export const useCompanyStore = defineStore("company", {
         this.status = { message: "Erro ao criar empresa", type: "error" };
       } finally {
         this.loading = false;
-        setTimeout(() => {
-          this.status = resetStatus();
-        }, 3000);
       }
     },
-
     async updateCompany(company: Company): Promise<void> {
       this.loading = true;
       this.status = resetStatus();
@@ -109,13 +103,9 @@ export const useCompanyStore = defineStore("company", {
         this.status = { message: "Erro ao atualizar empresa", type: "error" };
       } finally {
         this.loading = false;
-        setTimeout(() => {
-          this.status = resetStatus();
-        }, 3000);
       }
     },
-
-    async deleteCompany(id: number): Promise<void> {
+    async deleteCompany(id: string): Promise<void> {
       this.loading = true;
       this.status = resetStatus();
       try {
@@ -131,22 +121,71 @@ export const useCompanyStore = defineStore("company", {
         this.status = { message: "Erro ao deletar empresa", type: "error" };
       } finally {
         this.loading = false;
-        setTimeout(() => {
-          this.status = resetStatus();
-        }, 3000);
       }
     },
 
-    addEmployee(employee: Employee) {
+    async createEmployee(companyId: string, employee: Employee) {
       if (!this.companySelected) return;
+      this.loading = true;
+      this.status = resetStatus();
 
-      this.companySelected.employees.push(employee);
+      try {
+        const newEmployee = {
+          ...employee,
+          id: crypto.randomUUID(),
+        };
+
+        const updatedCompany = {
+          ...this.companySelected,
+          employees: [...this.companySelected.employees, newEmployee],
+        };
+
+        await api.put(`/companies/${companyId}`, updatedCompany);
+
+        this.companySelected = updatedCompany;
+
+        this.status = {
+          message: "Usuário criado com sucesso",
+          type: "success",
+        };
+      } catch (err) {
+        this.status = {
+          message: "Erro ao criar funcionário",
+          type: "error",
+        };
+      } finally {
+        this.loading = false;
+      }
     },
-
-    deleteEmployee(index: number) {
+    async deleteEmployee(employeeId: string) {
       if (!this.companySelected) return;
 
-      this.companySelected.employees.splice(index, 1);
+      this.loading = true;
+      this.status = resetStatus();
+
+      try {
+        const employees = this.companySelected.employees.filter(
+          (employee) => employee.id !== employeeId,
+        );
+
+        const updatedCompany = {
+          ...this.companySelected,
+          employees,
+        };
+
+        await api.put(`/companies/${this.companySelected.id}`, updatedCompany);
+
+        this.companySelected = updatedCompany;
+
+        this.status = {
+          message: "Funcionário removido com sucesso",
+          type: "success",
+        };
+      } catch (err) {
+        this.status = { message: "Erro ao excluir usuário", type: "error" };
+      } finally {
+        this.loading = false;
+      }
     },
   },
 });

@@ -1,40 +1,5 @@
 <template>
-  <Alert :status="companyStore.status" />
-  <div
-    v-if="companyStore.loading && !deleting"
-    class="d-flex flex-wrap justify-center ga-4"
-  >
-    <v-card
-      v-for="n in 6"
-      :key="n"
-      class="pa-4 pb-3 rounded-xl"
-      style="width: 390px"
-    >
-      <div class="d-flex justify-space-between align-center gap-2 mb-3">
-        <v-skeleton-loader type="chip" width="70"></v-skeleton-loader>
-        <v-skeleton-loader type="chip" width="80"></v-skeleton-loader>
-      </div>
-      <v-skeleton-loader type="heading"></v-skeleton-loader>
-      <v-skeleton-loader type="subtitle" width="200"></v-skeleton-loader>
-      <div class="d-flex justify-end gap-2">
-        <v-skeleton-loader
-          type="button"
-          width="96"
-          height="48"
-        ></v-skeleton-loader>
-        <v-skeleton-loader
-          type="button"
-          width="96"
-          height="48"
-        ></v-skeleton-loader>
-        <v-skeleton-loader
-          type="button"
-          width="96"
-          height="48"
-        ></v-skeleton-loader>
-      </div>
-    </v-card>
-  </div>
+  <CardLoader v-if="companyStore.loading && !deleteModal" :qtd="6" />
 
   <v-data-iterator
     v-else
@@ -66,9 +31,9 @@
     </template>
   </v-data-iterator>
 
-  <DeleteCompanyModal
+  <ConfirmDeleteModal
     v-model="deleteModal"
-    :company="companyStore.companySelected"
+    :name="companyStore.companySelected?.name || ''"
     :loading="deleting"
     @confirm="handleDelete"
     @cancel="deleteModal = false"
@@ -79,16 +44,17 @@
     color="primary"
     rounded="xl"
     icon="mdi-plus"
-    class="position-absolute bottom-0 mb-5"
-    style="z-index: 10000"
+    class="position-fixed bottom-0 mb-10"
+    style="z-index: 1000"
   ></v-btn>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { useCompanyStore } from "../stores/companyStore";
-import DeleteCompanyModal from "@/components/DeleteCompanyModal.vue";
+import { useCompanyStore } from "@/stores/companyStore";
+import CardLoader from "@/components/CardLoader.vue";
 import CompanyCard from "@/components/CompanyCard.vue";
+import ConfirmDeleteModal from "@/components/ConfirmDeleteModal.vue";
 import Alert from "@/components/Alert.vue";
 import handleActiveColor from "@/utils/handleActiveColor.ts";
 
