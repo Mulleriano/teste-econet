@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
     </template>
     <v-toolbar-title
-      ><a href="/" class="text-decoration-none">Econet</a></v-toolbar-title
+      ><a href="/" class="text-decoration-none text-primary font-weight-bold">Econet</a></v-toolbar-title
     >
   </v-app-bar>
 
