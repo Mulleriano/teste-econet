@@ -8,9 +8,10 @@
     </div>
     <CompanyForm
       @save="createCompany"
+      :company="null"
+      :mode="'create'"
       :loading="companyStore.loading"
       :status="companyStore.status"
-      :mode="'create'"
     />
   </div>
 </template>
@@ -24,9 +25,8 @@ import Alert from "@/components/Alert.vue";
 const companyStore = useCompanyStore();
 
 async function createCompany(company: Company) {
-  if (!company.name) {
-    return;
-  }
+  console.log(company);
+
   await companyStore.createCompany(company);
 }
 </script>

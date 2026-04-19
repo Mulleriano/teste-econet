@@ -3,9 +3,12 @@
   <div class="d-flex flex-column ga-4 align-center">
     <div class="d-flex align-center ga-4">
       <v-btn @click="$router.push('../')" icon="mdi-arrow-left-bold"></v-btn>
-      <h1 class="text-center">Editar {{ companyStore.companySelected?.name }}</h1>
+      <h1 class="text-center">
+        Editar {{ companyStore.companySelected?.name }}
+      </h1>
     </div>
     <CompanyForm
+      v-if="companyStore.companySelected"
       :company="companyStore.companySelected"
       :loading="companyStore.loading"
       :status="companyStore.status"
@@ -25,13 +28,15 @@ import type { Company } from "@/types/companies";
 
 const route = useRoute();
 const companyStore = useCompanyStore();
-const companyName = computed(() => companyStore.companySelected?.name || "Empresa");
+const companyName = computed(
+  () => companyStore.companySelected?.name || "Empresa",
+);
 
-function updateCompany(company: Company) {  
+function updateCompany(company: Company) {
   companyStore.updateCompany(company);
 }
 
-onMounted(() => {
-  companyStore.selectedCompany(route.params.id);
+onMounted(async () => {
+  await companyStore.selectedCompany(Number(route.params.id));
 });
 </script>
