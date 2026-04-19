@@ -1,6 +1,4 @@
 <template>
-  <Alert :status="companyStore.status" />
-
   <div>
     <div class="d-flex align-center ga-4">
       <v-btn @click="$router.push('../')" icon="mdi-arrow-left-bold"></v-btn>
@@ -25,8 +23,6 @@ import Alert from "@/components/Alert.vue";
 const companyStore = useCompanyStore();
 
 async function createCompany(company: Company) {
-  console.log(company);
-
   await companyStore.createCompany(company);
 }
 </script>
