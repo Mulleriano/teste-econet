@@ -20,7 +20,7 @@
   <v-container
     max-width="900"
     height="100%"
-    class="d-flex justify-center align-center"
+    class="d-flex justify-center align-start"
   >
     <router-view />
   </v-container>
