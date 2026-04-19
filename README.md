@@ -10,7 +10,7 @@ Projeto criado com Vuetify CLI.
 **Rodar a API fake**
 O projeto utiliza json-server para simular um backend. Execute:
 ```bash
-json-server --watch db.json --port 4000
+json-server --watch src/dbjson/db.json --port 4000
 ```
 A API ficará disponível em: http://localhost:4000
 
