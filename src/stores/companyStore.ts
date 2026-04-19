@@ -14,7 +14,13 @@ interface CompanyState {
 export const useCompanyStore = defineStore("company", {
   state: (): CompanyState => ({
     companies: [],
-    companySelected: null,
+    companySelected: {
+      id: 0,
+      name: "",
+      cnpj: "",
+      active: true,
+      employees: [],
+    },
     loading: false,
     status: {
       message: "",
@@ -44,29 +50,18 @@ export const useCompanyStore = defineStore("company", {
       }
     },
 
-    async searchCompany(id: number): Promise<void> {
+    async selectedCompany(id: number): Promise<void> {
       this.loading = true;
       this.status = resetStatus();
       try {
         const response = await api.get(`/companies/${id}`);
         const company = response.data;
-
         this.companySelected = company;
       } catch (err) {
         this.status = { message: "Erro ao carregar empresa", type: "error" };
       } finally {
         this.loading = false;
       }
-    },
-
-    selectedCompany(id: number) {
-      if (!this.companies.length) {
-        this.searchCompany(id);
-      } else {
-        this.companySelected = this.companies.find((e) => e.id === id) || null;
-      }
-
-      return this.companySelected;
     },
 
     async createCompany(company: Company): Promise<void> {
