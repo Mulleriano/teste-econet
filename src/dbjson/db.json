@@ -1,19 +1,19 @@
 {
   "companies": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Empresa A",
       "cnpj": "00.000.000/0001-00",
       "active": true,
       "employees": [
         {
-          "id": 1,
+          "id": "1",
           "name": "Funcionário 1",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 2,
+          "id": "2",
           "name": "Funcionário 2",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -21,19 +21,19 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Empresa B",
       "cnpj": "11.111.111/0001-11",
       "active": true,
       "employees": [
         {
-          "id": 3,
+          "id": "3",
           "name": "Funcionário 3",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 4,
+          "id": "4",
           "name": "Funcionário 4",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -47,13 +47,13 @@
       "active": true,
       "employees": [
         {
-          "id": 5,
+          "id": "5",
           "name": "Funcionário 5",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 6,
+          "id": "6",
           "name": "Funcionário 6",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -67,13 +67,13 @@
       "active": true,
       "employees": [
         {
-          "id": 7,
+          "id": "7",
           "name": "Funcionário 7",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 8,
+          "id": "8",
           "name": "Funcionário 8",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -87,13 +87,13 @@
       "active": false,
       "employees": [
         {
-          "id": 9,
+          "id": "9",
           "name": "Funcionário 9",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 10,
+          "id": "10",
           "name": "Funcionário 10",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -107,13 +107,13 @@
       "active": true,
       "employees": [
         {
-          "id": 11,
+          "id": "11",
           "name": "Funcionário 11",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 12,
+          "id": "12",
           "name": "Funcionário 12",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -127,13 +127,13 @@
       "active": true,
       "employees": [
         {
-          "id": 13,
+          "id": "13",
           "name": "Funcionário 13",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 14,
+          "id": "14",
           "name": "Funcionário 14",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -147,13 +147,13 @@
       "active": false,
       "employees": [
         {
-          "id": 15,
+          "id": "15",
           "name": "Funcionário 15",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 16,
+          "id": "16",
           "name": "Funcionário 16",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -167,13 +167,13 @@
       "active": true,
       "employees": [
         {
-          "id": 17,
+          "id": "17",
           "name": "Funcionário 17",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 18,
+          "id": "18",
           "name": "Funcionário 18",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -187,13 +187,13 @@
       "active": false,
       "employees": [
         {
-          "id": 19,
+          "id": "19",
           "name": "Funcionário 19",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 20,
+          "id": "20",
           "name": "Funcionário 20",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -207,13 +207,13 @@
       "active": true,
       "employees": [
         {
-          "id": 21,
+          "id": "21",
           "name": "Funcionário 21",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 22,
+          "id": "22",
           "name": "Funcionário 22",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -227,13 +227,13 @@
       "active": true,
       "employees": [
         {
-          "id": 23,
+          "id": "23",
           "name": "Funcionário 23",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 24,
+          "id": "24",
           "name": "Funcionário 24",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -247,13 +247,13 @@
       "active": false,
       "employees": [
         {
-          "id": 25,
+          "id": "25",
           "name": "Funcionário 25",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 26,
+          "id": "26",
           "name": "Funcionário 26",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -267,13 +267,13 @@
       "active": true,
       "employees": [
         {
-          "id": 27,
+          "id": "27",
           "name": "Funcionário 27",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 28,
+          "id": "28",
           "name": "Funcionário 28",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -287,13 +287,13 @@
       "active": true,
       "employees": [
         {
-          "id": 29,
+          "id": "29",
           "name": "Funcionário 29",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 30,
+          "id": "30",
           "name": "Funcionário 30",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -307,13 +307,13 @@
       "active": false,
       "employees": [
         {
-          "id": 31,
+          "id": "31",
           "name": "Funcionário 31",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 32,
+          "id": "32",
           "name": "Funcionário 32",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -327,13 +327,13 @@
       "active": true,
       "employees": [
         {
-          "id": 33,
+          "id": "33",
           "name": "Funcionário 33",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 34,
+          "id": "34",
           "name": "Funcionário 34",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -347,13 +347,13 @@
       "active": true,
       "employees": [
         {
-          "id": 35,
+          "id": "35",
           "name": "Funcionário 35",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 36,
+          "id": "36",
           "name": "Funcionário 36",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -367,13 +367,13 @@
       "active": false,
       "employees": [
         {
-          "id": 37,
+          "id": "37",
           "name": "Funcionário 37",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 38,
+          "id": "38",
           "name": "Funcionário 38",
           "email": "email@email.com",
           "position": "Cargo 2"
@@ -387,13 +387,13 @@
       "active": true,
       "employees": [
         {
-          "id": 39,
+          "id": "39",
           "name": "Funcionário 39",
           "email": "email@email.com",
           "position": "Cargo 1"
         },
         {
-          "id": 40,
+          "id": "40",
           "name": "Funcionário 40",
           "email": "email@email.com",
           "position": "Cargo 2"
