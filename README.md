@@ -1,6 +1,25 @@
 # teste-econet
 
+<img width="1234" height="916" alt="image" src="https://github.com/user-attachments/assets/74172131-bb20-47d2-b44c-e4ef1fa9ad63" />
+
+
 Projeto criado com Vuetify CLI.
+
+## 🚀 Como Rodar
+
+**Rodar a API fake**
+O projeto utiliza json-server para simular um backend. Execute:
+```bash
+json-server --watch db.json --port 4000
+```
+A API ficará disponível em: http://localhost:4000
+
+**Rodar o frontend**
+Em outro terminal execute:
+```bash
+npm run dev
+```
+A aplicação ficará disponível em: http://localhost:3000
 
 ## ❗️ Documentação
 
