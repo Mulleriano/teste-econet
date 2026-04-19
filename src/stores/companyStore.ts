@@ -44,9 +44,80 @@ export const useCompanyStore = defineStore("company", {
       }
     },
 
+    async searchCompany(id: number): Promise<void> {
+      this.loading = true;
+      this.status = resetStatus();
+      try {
+        const response = await api.get(`/companies/${id}`);
+        const company = response.data;
+
+        this.companySelected = company;
+      } catch (err) {
+        this.status = { message: "Erro ao carregar empresa", type: "error" };
+      } finally {
+        this.loading = false;
+      }
+    },
+
     selectedCompany(id: number) {
-      this.companySelected = this.companies.find((e) => e.id === id) || null;
+      if (!this.companies.length) {
+        this.searchCompany(id);
+      } else {
+        this.companySelected = this.companies.find((e) => e.id === id) || null;
+      }
+
       return this.companySelected;
+    },
+
+    async createCompany(company: Company): Promise<void> {
+      this.loading = true;
+      this.status = resetStatus();
+      try {
+        const response = await api.post("/companies", company);
+        const newCompany = response.data;
+
+        this.companies.push({ ...newCompany, employees: [] });
+        this.status = {
+          message: "Empresa criada com sucesso",
+          type: "success",
+        };
+      } catch (err) {
+        this.status = { message: "Erro ao criar empresa", type: "error" };
+      } finally {
+        this.loading = false;
+        setTimeout(() => {
+          this.status = resetStatus();
+        }, 3000);
+      }
+    },
+
+    async updateCompany(company: Company): Promise<void> {
+      this.loading = true;
+      this.status = resetStatus();
+      try {
+        const response = await api.put(`/companies/${company.id}`, company);
+        const updatedCompany = response.data;
+        const index = this.companies.findIndex((e) => e.id === company.id);
+        if (index !== -1) {
+          this.companies[index] = {
+            ...updatedCompany,
+            employees: this.companies[index].employees,
+          };
+        }
+        this.companySelected = updatedCompany;
+
+        this.status = {
+          message: "Empresa atualizada com sucesso",
+          type: "success",
+        };
+      } catch (err) {
+        this.status = { message: "Erro ao atualizar empresa", type: "error" };
+      } finally {
+        this.loading = false;
+        setTimeout(() => {
+          this.status = resetStatus();
+        }, 3000);
+      }
     },
 
     async deleteCompany(id: number): Promise<void> {
