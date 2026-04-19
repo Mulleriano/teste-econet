@@ -4,13 +4,11 @@
     width="auto"
     @update:model-value="$emit('update:modelValue', $event)"
   >
-    <v-card max-width="400">
+    <v-card max-width="400" rounded="xl">
       <v-card-title class="font-weight-bold">
-        {{ company?.name }}
+        {{ name }}
       </v-card-title>
-      <v-card-text>
-        Tem certeza de que deseja deletar esta empresa?
-      </v-card-text>
+      <v-card-text> Tem certeza de que deseja deletar? </v-card-text>
       <v-card-actions>
         <v-btn text="Cancelar" @click="$emit('cancel')"></v-btn>
         <v-btn
@@ -25,11 +23,9 @@
 </template>
 
 <script setup lang="ts">
-import type { Company } from "@/types/companies";
-
 interface Props {
   modelValue: boolean;
-  company: Company | null;
+  name: string | null;
   loading: boolean;
 }
 
