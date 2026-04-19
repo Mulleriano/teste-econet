@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="d-flex align-center ga-4">
-      <v-btn @click="$router.push('../')" icon="mdi-arrow-left-bold"></v-btn>
+      <v-btn
+        @click="$router.go(-1)"
+        size="large"
+        icon="mdi-arrow-left-thick"
+        variant="text"
+      ></v-btn>
       <h1 class="text-center">Cadastrar Empresa</h1>
     </div>
     <CompanyForm
