@@ -6,7 +6,7 @@
           v-model="company.name"
           variant="outlined"
           label="Nome"
-          :rules="nameRules"
+          :rules="[nameRules]"
           :disabled="props.loading"
           class="mb-4"
           required
@@ -98,7 +98,7 @@ const cnpjRules = [
   (v: string) => !!v || "CNPJ é obrigatório",
   (v: string) => validateCNPJ(v) || "CNPJ inválido",
 ];
-const nameRule = (value: string) => !!value?.trim() || "Nome é obrigatório";
+const nameRules = (value: string) => !!value?.trim() || "Nome é obrigatório";
 
 async function handleSave() {
   const { valid } = await form.value.validate();
