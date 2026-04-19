@@ -1,13 +1,5 @@
 <template>
-  <v-alert
-    class="position-absolute bottom-0 mb-4"
-    style="z-index: 100"
-    v-show="companyStore.status.message"
-    :type="companyStore.status.type"
-    variant="tonal"
-  >
-    {{ companyStore.status.message }}
-  </v-alert>
+  <Alert :status="companyStore.status" />
   <div
     v-if="companyStore.loading && !deleting"
     class="d-flex flex-wrap justify-center ga-4"
@@ -81,6 +73,15 @@
     @confirm="handleDelete"
     @cancel="deleteModal = false"
   />
+
+  <v-btn
+    @click="$router.push('/new')"
+    color="primary"
+    rounded="xl"
+    icon="mdi-plus"
+    class="position-absolute bottom-0 mb-5"
+    style="z-index: 10000"
+  ></v-btn>
 </template>
 
 <script setup lang="ts">
@@ -88,6 +89,7 @@ import { ref, onMounted } from "vue";
 import { useCompanyStore } from "../stores/companyStore";
 import DeleteCompanyModal from "@/components/DeleteCompanyModal.vue";
 import CompanyCard from "@/components/CompanyCard.vue";
+import Alert from "@/components/Alert.vue";
 import handleActiveColor from "@/utils/handleActiveColor.ts";
 
 const companyStore = useCompanyStore();

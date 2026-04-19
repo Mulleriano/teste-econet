@@ -9,10 +9,10 @@
   </v-app-bar>
 
   <v-navigation-drawer v-model="sidebar" permanent>
-    <v-list-item :active="!$route.params.id" link href="/">
+    <v-list-item :active="route.name == 'Listagem'" link href="/">
       <v-list-item-title>Empresas</v-list-item-title>
     </v-list-item>
-    <v-list-item link href="/create">
+    <v-list-item :active="route.name == 'Criar Empresa'" link href="/new">
       <v-list-item-title>Cadastrar Empresa</v-list-item-title>
     </v-list-item>
   </v-navigation-drawer>
@@ -28,6 +28,8 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 
 const sidebar = ref(false);
+const route = useRoute();
 </script>
