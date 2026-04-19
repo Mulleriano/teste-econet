@@ -73,6 +73,15 @@
     @confirm="handleDelete"
     @cancel="deleteModal = false"
   />
+
+  <v-btn
+    @click="$router.push('/new')"
+    color="primary"
+    rounded="xl"
+    icon="mdi-plus"
+    class="position-absolute bottom-0 mb-5"
+    style="z-index: 10000"
+  ></v-btn>
 </template>
 
 <script setup lang="ts">
