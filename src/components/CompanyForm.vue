@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, watch, computed } from "vue";
+import { ref, reactive, watch, computed, nextTick } from "vue";
 import type { Company } from "@/types/companies";
 import { validateCNPJ } from "@/utils/validateCNPJ";
 import { maskCNPJ } from "@/utils/maskCNPJ";
@@ -82,9 +82,15 @@ const company = reactive<Company>({
 });
 
 const form = ref();
-const clearForm = () => {
-  if (props.mode == "create") {
-    form.value.reset();
+const clearForm = async () => {
+  if (props.mode === "create") {
+    company.name = "";
+    company.cnpj = "";
+    company.active = true;
+    company.employees = [];
+    company.id = generateId();
+
+    await nextTick();
     form.value.resetValidation();
   }
 };
